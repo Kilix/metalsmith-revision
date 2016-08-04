@@ -6,9 +6,7 @@ const markdown = require('metalsmith-markdown')
 Metalsmith(__dirname)
   .clean(false)
   .use(markdown())
-  .use(layouts({
-    engine: 'jade'
-  }))
+  .use(layouts({ engine: 'jade' }))
   .use(revision())
   .build(function(err) {
     if (err) throw err
