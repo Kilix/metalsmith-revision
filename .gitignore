@@ -1,0 +1,5 @@
+node_modules
+example/build
+example/node_modules
+lib
+npm-debug.log
