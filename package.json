@@ -14,7 +14,6 @@
     "prebuild": "rimraf lib",
     "build": "babel --copy-files src/ -d lib/",
     "watch": "babel -w src/ -d lib/",
-    "commit": "git-cz",
     "test": "mocha -w --compilers js:babel-register",
     "test:single": "mocha --compilers js:babel-register",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -25,8 +24,6 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
-    "commitizen": "^2.8.1",
-    "cz-conventional-changelog": "^1.1.6",
     "mocha": "^2.4.5",
     "rimraf": "^2.5.2",
     "semantic-release": "^4.3.5"
@@ -35,10 +32,5 @@
   "license": "MIT",
   "dependencies": {
     "crypto": "0.0.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
   }
 }
