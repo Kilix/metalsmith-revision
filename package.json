@@ -7,6 +7,10 @@
     "lib",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wcastand/metalsmith-revision.git"
+  },
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "babel --copy-files src/ -d lib/",
