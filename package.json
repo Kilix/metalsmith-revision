@@ -38,7 +38,7 @@
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
     "commitizen": "^2.8.1",
-    "cz-conventional-changelog": "^1.1.0",
+    "cz-conventional-changelog": "^1.1.6",
     "mocha": "^3.0.1",
     "rimraf": "^2.5.4",
     "semantic-release": "^4.3.5"
