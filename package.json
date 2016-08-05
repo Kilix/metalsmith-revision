@@ -1,14 +1,8 @@
 {
   "name": "metalsmith-revision",
-  "description": "Compile only the changed files",
-  "main": "./lib/index.js",
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wcastand/metalsmith-revision.git"
-  },
+  "version": "0.0.0-semantic-release",
+  "description": "Compile only the modified files",
+  "main": "lib/index.js",
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "babel --copy-files src/ -d lib/",
@@ -18,16 +12,28 @@
     "test:single": "mocha --compilers js:babel-register",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "author": "William Castandet <wcastand@gmail.com> (https://github.com/wcastand)",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcastand/metalsmith-revision.git"
+  },
+  "keywords": [
+    "metalsmith",
+    "changed"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "author": "William Castandet <wcastand@gmail.com> (https://github.com/wcastand)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wcastand/metalsmith-revision/issues"
+  },
+  "homepage": "https://github.com/wcastand/metalsmith-revision#readme",
   "devDependencies": {
     "babel-cli": "^6.11.4",
-    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015": "^6.13.1",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
