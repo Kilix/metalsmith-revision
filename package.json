@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-revision",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.1",
   "description": "Compile only the modified files",
   "main": "lib/index.js",
   "scripts": {
@@ -20,11 +20,6 @@
     "metalsmith",
     "changed"
   ],
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
   "author": "William Castandet <wcastand@gmail.com> (https://github.com/wcastand)",
   "license": "MIT",
   "bugs": {
@@ -37,11 +32,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
-    "commitizen": "^2.8.4",
-    "cz-conventional-changelog": "^1.1.6",
     "mocha": "^3.0.1",
-    "rimraf": "^2.5.4",
-    "semantic-release": "^4.3.5"
+    "rimraf": "^2.5.4"
   },
   "dependencies": {
     "crypto": "0.0.3",
