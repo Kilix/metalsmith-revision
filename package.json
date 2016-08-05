@@ -7,7 +7,7 @@
     "prebuild": "rimraf lib",
     "build": "babel --copy-files src/ -d lib/",
     "watch": "babel -w src/ -d lib/",
-    "commit": "git-cz",
+    "commit": "git cz",
     "test": "mocha -w --compilers js:babel-register",
     "test:single": "mocha --compilers js:babel-register",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
