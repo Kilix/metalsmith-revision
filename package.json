@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-revision",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0",
   "description": "Compile only the modified files",
   "main": "lib/index.js",
   "files": [
