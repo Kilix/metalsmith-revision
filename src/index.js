@@ -21,16 +21,18 @@ export default function(opts) {
     const revision = fs.existsSync(configPath)
       ? JSON.parse(fs.readFileSync(configPath, 'utf-8'))
       : null
-    recurse(
-      layoutDirectory
-    , (err, layouts) => {
-        if(err) throw(err)
-        layouts.map(l => {
-          const path = relative(layoutDirectory, l)
-          const content = fs.readFileSync(l, 'utf-8')
-          const hash = checksum(content)
-          hash_table.layouts[path] = hash
-      })
+    if(options.layout){
+      recurse(
+        layoutDirectory
+      , (err, layouts) => {
+          if(err) throw(err)
+          layouts.map(l => {
+            const path = relative(layoutDirectory, l)
+            const content = fs.readFileSync(l, 'utf-8')
+            const hash = checksum(content)
+            hash_table.layouts[path] = hash
+        })
+    }
       Object.keys(files).forEach(file => {
         const hash = checksum(files[file].contents)
         hash_table.src[file] = hash
