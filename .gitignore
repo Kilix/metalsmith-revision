@@ -2,3 +2,4 @@ node_modules
 example
 lib
 npm-debug.log
+.DS_Store
