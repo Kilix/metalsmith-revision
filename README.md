@@ -37,3 +37,11 @@ Metalsmith(__dirname)
 ```
 
 By default, layout are deactivated. If you do not specified a directory, the plugin will look for the default one ('./layouts').
+
+## Benchmark
+
+You can find some performance test here: [benchmark](https://github.com/wcastand/metalsmith-benchmark)
+
+## Contributing
+
+Feel free to make issues or PRs or do some test (i would love that ;) ).
