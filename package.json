@@ -1,7 +1,7 @@
 {
   "name": "metalsmith-revision",
   "version": "0.0.4",
-  "description": "Compile only the modified files",
+  "description": "Compile only the modified files with metalsmith (compatible with metalsmith-layouts",
   "main": "lib/index.js",
   "files": [
     "lib",
