@@ -46,8 +46,21 @@ export default function(opts) {
 
         fs.writeFileSync(configPath, JSON.stringify(hash_table), 'utf-8')
         done()
-
       })
+    }
+    else{
+      Object.keys(files).forEach(file => {
+        const hash = checksum(files[file].contents)
+        hash_table.src[file] = hash
+        if(
+          (revision !== null && revision.src[file] === hash) &&
+          ( (!options.layout) ||
+            (options.layout && revision.layouts[files[file].layout] === hash_table.layouts[files[file].layout]) ) )
+          delete files[file]
+      })
+
+      fs.writeFileSync(configPath, JSON.stringify(hash_table), 'utf-8')
+      done()
     }
   }
 }
