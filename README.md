@@ -23,6 +23,7 @@ Metalsmith(__dirname)
 
 If you use matealsmith-layouts, you need inform the plugin:
 ```javascript
+import layouts from 'metalsmith-layouts'
 import revision from 'metalsmith-revision'
 // OR
 const revision = require('metalsmith-revision').default
@@ -30,6 +31,7 @@ const revision = require('metalsmith-revision').default
 Metalsmith(__dirname)
   .revision({ layout: true, layoutDir: './layouts' })
   .markdown()
+  .layouts({ engine: 'jade'})
   //...your plugins
   .build()
 ```
