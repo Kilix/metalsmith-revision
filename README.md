@@ -14,8 +14,8 @@ import revision from 'metalsmith-revision'
 const revision = require('metalsmith-revision').default
 
 Metalsmith(__dirname)
-  .revision()
-  .markdown()
+  .use(revision())
+  .use(markdown())
   //...your plugins
   .build()
 ```
@@ -29,9 +29,9 @@ import revision from 'metalsmith-revision'
 const revision = require('metalsmith-revision').default
 
 Metalsmith(__dirname)
-  .revision({ layout: true, layoutDir: './layouts' })
-  .markdown()
-  .layouts({ engine: 'jade'})
+  .use(revision({ layout: true, layoutDir: './layouts' }))
+  .use(markdown())
+  .use(layouts({ engine: 'jade'}))
   //...your plugins
   .build()
 ```
